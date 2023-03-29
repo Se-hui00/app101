@@ -41,6 +41,12 @@ public class MemberController {
       return "member/joinForm";
     }
 
+    //비밀번호 체크
+    if(!joinForm.getPasswd().equals(joinForm.getPasswdchk())) {
+      bindingResult.reject("passwd", "비밀번호가 일치하지 않습니다.");
+      log.info("bindingResult={}", bindingResult);
+      return "member/joinForm";
+    }
     Member member = new Member();
     member.setEmail(joinForm.getEmail());
     member.setPasswd(joinForm.getPasswd());
