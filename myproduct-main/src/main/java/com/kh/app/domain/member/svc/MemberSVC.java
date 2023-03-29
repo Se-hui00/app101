@@ -1,18 +1,18 @@
-package com.kh.app.domain.member.dao;
+package com.kh.app.domain.member.svc;
 
 import com.kh.app.domain.entity.Member;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface MemberDAO {
+public interface MemberSVC {
   //가입
   Member save(Member member);
 
   //수정
   void update(Long memberId, Member member);
 
-  //조회 by email
+  //조회 by mail
   Optional<Member> findByEmail(String email);
 
   //조회 by member_id
@@ -32,5 +32,4 @@ public interface MemberDAO {
 
   //아이디찾기
   Optional<String> findEmailByNickname(String nickname);
-
 }

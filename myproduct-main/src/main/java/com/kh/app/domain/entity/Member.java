@@ -20,9 +20,7 @@ public class Member {
 //  private LocalDateTime cdate;  //  CDATE	TIMESTAMP(6)
 //  private LocalDateTime udate;  //  UDATE	TIMESTAMP(6)
 
-
-  //필수필드의 생성자
-  public Member(Long memberId, String email, String passwd) {
+  public Member(Long memberId, String email, String passwd) {  //필수필드의 생성자
     this.memberId = memberId;
     this.email = email;
     this.passwd = passwd;
